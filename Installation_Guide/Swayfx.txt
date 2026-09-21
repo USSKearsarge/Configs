@@ -29,36 +29,7 @@ user = "jakub"
 //Next command in terminal
 mkdir -p ~/.config/sway
 nano ~/.config/sway/config
-
-set $mod Mod4
-
-# Terminal
-bindsym $mod+Return exec kitty
-
-# Exit
-bindsym $mod+Shift+e exec "swaymsg exit"
-
-# Reload config
-bindsym $mod+Shift+c reload
-
-# Kill focused window
-bindsym $mod+Shift+q kill
-
-# Run launcher
-set $menu wofi --show drun
-
-bindsym $mod+d exec $menu
-
-# Lock screen
-bindsym $mod+Shift+l exec swaylock
-
-output * bg #333333 solid_color
-
-exec_always "pkill waybar; waybar"
-
-exec_always pipewire &
-exec_always pipewire-pulse &
-exec_always wireplumber &
+//paste the stuff from the sway config file here 
 
 //next
 mkdir -p ~/.config/waybar
