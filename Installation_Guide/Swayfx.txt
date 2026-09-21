@@ -1,5 +1,5 @@
 sudo xbps-install -Su
-sudo xbps-install -S swayfx swaybg swayidle swaylock waybar foot wl-clipboard grim slurp kanshi mako network-manager-applet brightnessctl alsa-utils seatd kitty wofi
+sudo xbps-install -S swayfx swaybg swayidle swaylock waybar foot wl-clipboard grim slurp kanshi mako network-manager-applet brightnessctl alsa-utils seatd kitty wofi ddcutil i2c-tools
 sudo xbps-install -S pipewire wireplumber pipewire-pulse pavucontrol
 sudo ln -s /etc/sv/seatd /var/service/
 sudo sv up seatd
