@@ -253,3 +253,8 @@ shadows enable
 exec ~/.local/bin/autotiling
 
 font pango:Terminess Nerd Font Mono 12
+
+exec pipewire
+exec wireplumber
+exec pipewire-pulse
+
