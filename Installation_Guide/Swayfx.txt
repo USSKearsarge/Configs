@@ -7,11 +7,12 @@ sudo ln -s /etc/sv/dbus /var/service/dbus
 sudo sv up dbus
 sudo usermod -aG _seatd $USER
 sudo vi /usr/local/bin/start-sway
+//Script used for creating an xdg and dbus environments
 #!/bin/sh
 export XDG_RUNTIME_DIR=/tmp/xdg-runtime-$(id -u)
 mkdir -p "$XDG_RUNTIME_DIR"
 chmod 0700 "$XDG_RUNTIME_DIR"
-exec sway
+exec dbus-run-session sway
 
 
 sudo chmod +x /usr/local/bin/start-sway
