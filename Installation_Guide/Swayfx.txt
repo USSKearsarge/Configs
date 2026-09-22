@@ -1,6 +1,7 @@
 sudo xbps-install -Su
 sudo xbps-install -S swayfx swaybg swayidle swaylock waybar foot wl-clipboard grim slurp kanshi mako network-manager-applet brightnessctl alsa-utils seatd kitty wofi ddcutil i2c-tools alsa-pipewire
 sudo xbps-install -S pipewire wireplumber pipewire-pulse pavucontrol
+//sudo xbps-install void-repo-nonfree //repo with non foss stuff, for stuff like steam
 sudo ln -s /etc/sv/seatd /var/service/
 sudo sv up seatd
 sudo ln -s /etc/sv/dbus /var/service/dbus
