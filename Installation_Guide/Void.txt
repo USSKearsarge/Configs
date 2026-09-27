@@ -1,15 +1,22 @@
 sudo xbps-install -Su
-sudo xbps-install -S swayfx swaybg swayidle swaylock waybar foot wl-clipboard grim slurp kanshi mako network-manager-applet brightnessctl alsa-utils seatd kitty wofi
+sudo xbps-install -S swayfx swaybg swayidle swaylock waybar foot wl-clipboard grim slurp kanshi mako network-manager-applet brightnessctl alsa-utils seatd kitty wofi ddcutil i2c-tools alsa-pipewire
 sudo xbps-install -S pipewire wireplumber pipewire-pulse pavucontrol
+//sudo xbps-install void-repo-nonfree //repo with non foss stuff, for stuff like steam
 sudo ln -s /etc/sv/seatd /var/service/
 sudo sv up seatd
+sudo ln -s /etc/sv/dbus /var/service/dbus
+sudo sv up dbus
 sudo usermod -aG _seatd $USER
+sudo mkdir -p /etc/alsa/conf.d
+sudo ln -sf /usr/share/alsa/alsa.conf.d/50-pipewire.conf /etc/alsa/conf.d/
+sudo ln -sf /usr/share/alsa/alsa.conf.d/99-pipewire-default.conf /etc/alsa/conf.d/
 sudo vi /usr/local/bin/start-sway
+//Script used for creating an xdg and dbus environments
 #!/bin/sh
 export XDG_RUNTIME_DIR=/tmp/xdg-runtime-$(id -u)
 mkdir -p "$XDG_RUNTIME_DIR"
 chmod 0700 "$XDG_RUNTIME_DIR"
-exec sway
+exec dbus-run-session sway
 
 
 sudo chmod +x /usr/local/bin/start-sway
@@ -29,36 +36,7 @@ user = "jakub"
 //Next command in terminal
 mkdir -p ~/.config/sway
 nano ~/.config/sway/config
-
-set $mod Mod4
-
-# Terminal
-bindsym $mod+Return exec kitty
-
-# Exit
-bindsym $mod+Shift+e exec "swaymsg exit"
-
-# Reload config
-bindsym $mod+Shift+c reload
-
-# Kill focused window
-bindsym $mod+Shift+q kill
-
-# Run launcher
-set $menu wofi --show drun
-
-bindsym $mod+d exec $menu
-
-# Lock screen
-bindsym $mod+Shift+l exec swaylock
-
-output * bg #333333 solid_color
-
-exec_always "pkill waybar; waybar"
-
-exec_always pipewire &
-exec_always pipewire-pulse &
-exec_always wireplumber &
+//paste the stuff from the sway config file here 
 
 //next
 mkdir -p ~/.config/waybar
