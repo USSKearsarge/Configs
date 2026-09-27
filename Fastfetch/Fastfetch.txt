@@ -1,0 +1,8 @@
+move config from directory and move it to ~/.config/fastfetch/
+
+nano ~/.bashrc
+add this:
+alias fastfetch='fastfetch --config ~/.config/fastfetch/config.json'
+
+then reload
+source ~/.bashrc
