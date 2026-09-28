@@ -1,0 +1,2 @@
+Github
+git config --global user.name or user.email
