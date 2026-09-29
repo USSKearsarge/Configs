@@ -1,1 +1,5 @@
+Paste the config into:
 ~/.config/kitty/kitty.conf
+
+Paste the theme into:
+~/.config/kitty/current-theme.conf
