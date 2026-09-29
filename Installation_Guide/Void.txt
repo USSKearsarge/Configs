@@ -5,6 +5,8 @@ sudo xbps-install -S pipewire wireplumber pipewire-pulse pavucontrol alsa-pipewi
 sudo xbps-install -S git   //git for my workflow
 //We use Dolphin for now, but in future a change might be needed
 sudo xbps-install -S dolphin
+//Unzip is needed
+sudo xbps-install -S unzip
 //sudo xbps-install void-repo-nonfree //repo with non foss stuff, for stuff like steam
 sudo ln -s /etc/sv/seatd /var/service/
 sudo sv up seatd
