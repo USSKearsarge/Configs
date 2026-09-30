@@ -1,3 +1,6 @@
+make directory for the config 
+mkdir ~/.config/fastfetch/
+
 move config from directory and move it to ~/.config/fastfetch/
 
 nano ~/.bashrc
