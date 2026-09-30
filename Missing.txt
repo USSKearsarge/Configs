@@ -1,1 +1,6 @@
-Fastfetch
+Void Installation - done
+Sway - done
+Waybar - done
+Fastfetch alias - done
+Oh my ghostty - not yet
+
