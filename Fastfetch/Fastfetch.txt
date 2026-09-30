@@ -9,3 +9,5 @@ alias fastfetch='fastfetch --config ~/.config/fastfetch/config.json'
 
 then reload
 source ~/.bashrc
+
+you can change the logo at /home/jakub/Pictures/Logo.png, without it only the default logo will be shown. You are free to change the width/height depending on the image you want to use as logo
