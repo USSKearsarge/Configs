@@ -9,6 +9,10 @@ sudo xbps-install -S dolphin
 //OBS studio
 sudo xbps-install -S xdg-desktop-portal-wlr
 sudo xbps-install -S obs
+mkdir -p ~/.config/xdg-desktop-portal
+nano ~/.config/xdg-desktop-portal/sway-portals.conf
+[preferred]
+default=wlr
 
 //Unzip is needed
 sudo xbps-install -S unzip zip //Forgot zip command
