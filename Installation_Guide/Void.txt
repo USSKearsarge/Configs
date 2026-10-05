@@ -5,6 +5,11 @@ sudo xbps-install -S pipewire wireplumber pipewire-pulse pavucontrol alsa-pipewi
 sudo xbps-install -S git   //git for my workflow
 //We use Dolphin for now, but in future a change might be needed
 sudo xbps-install -S dolphin
+
+//OBS studio
+sudo xbps-install -S xdg-desktop-portal-wlr
+sudo xbps-install -S obs
+
 //Unzip is needed
 sudo xbps-install -S unzip zip //Forgot zip command
 //sudo xbps-install void-repo-nonfree //repo with non foss stuff, for stuff like steam
