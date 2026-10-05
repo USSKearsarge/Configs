@@ -1,11 +1,12 @@
 sudo xbps-install -Su
-//Default stuff needed to work
-sudo xbps-install -S swayfx swaybg swayidle swaylock waybar foot wl-clipboard grim slurp kanshi mako network-manager-applet brightnessctl seatd kitty wofi ddcutil i2c-tools xdg-utils net-tools
+//Default stuff needed to work + some extras
+sudo xbps-install -S swayfx swaybg swayidle swaylock waybar foot wl-clipboard grim slurp kanshi mako network-manager-applet brightnessctl seatd kitty wofi ddcutil i2c-tools xdg-utils net-tools dolphin
 sudo xbps-install -S pipewire wireplumber pipewire-pulse pavucontrol alsa-pipewire alsa-utils
+
+//Workflow
 sudo xbps-install -S git   //git for my workflow
 sudo xbps-install -S syncthing //syncthing for my workflow
-//We use Dolphin for now, but in future a change might be needed
-sudo xbps-install -S dolphin
+sudo xbps-install -S libreoffice
 
 //OBS studio
 sudo xbps-install -S xdg-desktop-portal-wlr
