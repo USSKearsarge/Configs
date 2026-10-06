@@ -1,7 +1,7 @@
 sudo xbps-install -Su
 //Default stuff needed to work + some extras
 sudo xbps-install -S swayfx swaybg swayidle swaylock waybar foot wl-clipboard grim slurp kanshi mako network-manager-applet brightnessctl seatd kitty wofi ddcutil i2c-tools xdg-utils net-tools dolphin
-sudo xbps-install -S pipewire wireplumber pipewire-pulse pavucontrol alsa-pipewire alsa-utils
+sudo xbps-install -S pipewire wireplumber pipewire-pulse pavucontrol alsa-pipewire alsa-utils easyeffects
 
 //Workflow
 sudo xbps-install -S git   //git for my workflow
